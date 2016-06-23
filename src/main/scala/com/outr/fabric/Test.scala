@@ -7,13 +7,16 @@ object Test extends JSApp {
   override def main(): Unit = {
     println(s"Hello World!")
 
+    val element = document.getElementById("canvas").asInstanceOf[html.Canvas]
+    element.width = window.innerWidth
+    element.height = window.innerHeight
     val canvas = new Canvas("canvas")
     val rect = new Rect {
       left = 100.0
       top = 100.0
       fill = "red"
-      width = 20
-      height = 20
+      width = 100
+      height = 100
     }
     canvas.add(rect)
   }
