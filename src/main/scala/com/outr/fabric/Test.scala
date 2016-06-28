@@ -10,7 +10,7 @@ object Test extends JSApp {
     val element = document.getElementById("canvas").asInstanceOf[html.Canvas]
     element.width = window.innerWidth
     element.height = window.innerHeight
-    val canvas = new Canvas("canvas")
+    val canvas = new StaticCanvas("canvas")
     val rect = new Rect {
       left = 100.0
       top = 100.0
