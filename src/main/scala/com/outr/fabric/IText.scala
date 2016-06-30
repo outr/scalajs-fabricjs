@@ -60,7 +60,7 @@ class IText(text: String, options: js.Object = new js.Object()) extends Text(tex
   /**
     * Overrides the IText implementation and adjusts character index as there is not always a linebreak
     */
-  def _getNewSelectionStartFromOffset(mouseOffset: Double, prevWidth: Double, width: Double, index: Double, jlen: Double): js.Object = js.native
+  def _getNewSelectionStartFromOffset(mouseOffset: Double, prevWidth: Double, width: Double, index: Double, jlen: Double): Double = js.native
   /**
     * Aborts cursor animation and clears all timeouts
     */
@@ -84,19 +84,19 @@ class IText(text: String, options: js.Object = new js.Object()) extends Text(tex
   /**
     * Find new selection index representing start of current line according to current selection index
     */
-  def findLineBoundaryLeft(startFrom: Double): js.Object = js.native
+  def findLineBoundaryLeft(startFrom: Double): Double = js.native
   /**
     * Find new selection index representing end of current line according to current selection index
     */
-  def findLineBoundaryRight(startFrom: Double): js.Object = js.native
+  def findLineBoundaryRight(startFrom: Double): Double = js.native
   /**
     * Find new selection index representing start of current word according to current selection index
     */
-  def findWordBoundaryLeft(startFrom: Double): js.Object = js.native
+  def findWordBoundaryLeft(startFrom: Double): Double = js.native
   /**
     * Find new selection index representing end of current word according to current selection index
     */
-  def findWordBoundaryRight(startFrom: Double): js.Object = js.native
+  def findWordBoundaryRight(startFrom: Double): Double = js.native
   /**
     * Forward delete
     */
@@ -108,11 +108,11 @@ class IText(text: String, options: js.Object = new js.Object()) extends Text(tex
   /**
     * Returns color (fill) of char at the current cursor
     */
-  def getCurrentCharColor(lineIndex: Double, charIndex: Double): js.Object = js.native
+  def getCurrentCharColor(lineIndex: Double, charIndex: Double): String = js.native
   /**
     * Returns fontSize of char at the current cursor
     */
-  def getCurrentCharFontSize(lineIndex: Double, charIndex: Double): js.Object = js.native
+  def getCurrentCharFontSize(lineIndex: Double, charIndex: Double): Double = js.native
   /**
     * Returns complete style of char at the current cursor
     */
@@ -120,19 +120,19 @@ class IText(text: String, options: js.Object = new js.Object()) extends Text(tex
   /**
     * Gets start offset of a selection
     */
-  def getDownCursorOffset(e: org.scalajs.dom.Event, isRight: Boolean): js.Object = js.native
+  def getDownCursorOffset(e: org.scalajs.dom.Event, isRight: Boolean): Double = js.native
   /**
     * Returns number of newlines in selected text
     */
-  def getNumNewLinesInSelectedText(): js.Object = js.native
+  def getNumNewLinesInSelectedText(): Double = js.native
   /**
     * Returns selected text
     */
-  def getSelectedText(): js.Object = js.native
+  def getSelectedText(): String = js.native
   /**
     * Returns index of a character corresponding to where an object was clicked
     */
-  def getSelectionStartFromPointer(e: org.scalajs.dom.Event): js.Object = js.native
+  def getSelectionStartFromPointer(e: org.scalajs.dom.Event): Double = js.native
   /**
     * Gets style of a current selection/cursor (at the start position)
     */
@@ -140,7 +140,7 @@ class IText(text: String, options: js.Object = new js.Object()) extends Text(tex
   /**
     * Parameters:
     */
-  def getUpCursorOffset(): js.Object = js.native
+  def getUpCursorOffset(): Double = js.native
   /**
     * Initializes "added" event handler
     */
@@ -260,11 +260,11 @@ class IText(text: String, options: js.Object = new js.Object()) extends Text(tex
   /**
     * Stops event observing for a particular event handler. Calling this method without arguments removes all handlers for all events
     */
-  def off(eventName: String, handler: js.Function): js.Object = js.native
+  def off(eventName: String, handler: js.Function): Unit = js.native
   /**
     * Observes specified event
     */
-  def on(eventName: String, handler: js.Function): js.Object = js.native
+  def on(eventName: String, handler: js.Function): Unit = js.native
   /**
     * Composition end
     */
@@ -316,7 +316,7 @@ class IText(text: String, options: js.Object = new js.Object()) extends Text(tex
   /**
     * Finds index corresponding to beginning or end of a word
     */
-  def searchWordBoundary(selectionStart: Double, direction: Double): js.Object = js.native
+  def searchWordBoundary(selectionStart: Double, direction: Double): Double = js.native
   /**
     * Selects entire text
     */
@@ -356,7 +356,7 @@ class IText(text: String, options: js.Object = new js.Object()) extends Text(tex
   /**
     * Fires event with an optional options object
     */
-  def trigger(eventName: String, options: js.Object = new js.Object()): js.Object = js.native
+  def trigger(eventName: String, options: js.Object = new js.Object()): Unit = js.native
 }
 
 /**

@@ -40,7 +40,7 @@ class Shadow(options: String = "") extends js.Object {
   /**
     * Returns SVG representation of a shadow
     */
-  def toSVG(`object`: Object): js.Object = js.native
+  def toSVG(`object`: Object): String = js.native
 }
 
 /**

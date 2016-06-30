@@ -44,7 +44,7 @@ class Image(element: String, options: js.Object = new js.Object()) extends Objec
   /**
     * Returns image element which this instance if based on
     */
-  def getElement(): js.Object = js.native
+  def getElement(): org.scalajs.dom.raw.HTMLImageElement = js.native
   /**
     * Returns original size of an image
     */
@@ -52,7 +52,7 @@ class Image(element: String, options: js.Object = new js.Object()) extends Objec
   /**
     * Returns source of an image
     */
-  def getSrc(): js.Object = js.native
+  def getSrc(): String = js.native
   /**
     * Sets crossOrigin value (on an instance and corresponding image element)
     */
@@ -68,7 +68,7 @@ class Image(element: String, options: js.Object = new js.Object()) extends Objec
   /**
     * Returns SVG representation of an instance
     */
-  def toSVG(reviver: js.Function = null): js.Object = js.native
+  def toSVG(reviver: js.Function = null): String = js.native
 }
 
 /**

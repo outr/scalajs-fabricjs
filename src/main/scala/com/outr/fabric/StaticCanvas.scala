@@ -84,7 +84,7 @@ class StaticCanvas(el: String, options: js.Object = new js.Object()) extends js.
   /**
     * Adds objects to collection, then renders canvas (if `renderOnAddRemove` is not `false`) Objects should be instances of (or inherit from) fabric.Object
     */
-  def add(`object`: Object): js.Object = js.native
+  def add(`object`: Object): Unit = js.native
   /**
     * Moves an object or a selection up in stack of drawn objects
     */
@@ -128,11 +128,11 @@ class StaticCanvas(el: String, options: js.Object = new js.Object()) extends js.
   /**
     * Returns number representation of a collection complexity
     */
-  def complexity(): js.Object = js.native
+  def complexity(): Double = js.native
   /**
     * Returns true if collection contains an object
     */
-  def contains(`object`: js.Object): js.Object = js.native
+  def contains(`object`: js.Object): Boolean = js.native
   /**
     * Clears a canvas element and removes all event listeners
     */
@@ -140,7 +140,7 @@ class StaticCanvas(el: String, options: js.Object = new js.Object()) extends js.
   /**
     * Executes given function for each object in this group
     */
-  def forEachObject(callback: js.Function, context: js.Object): js.Object = js.native
+  def forEachObject(callback: js.Function, context: js.Object): Unit = js.native
   /**
     * Centers object horizontally with animation.
     */
@@ -172,15 +172,15 @@ class StaticCanvas(el: String, options: js.Object = new js.Object()) extends js.
   /**
     * Returns context of canvas where objects are drawn
     */
-  def getContext(): js.Object = js.native
+  def getContext(): org.scalajs.dom.CanvasRenderingContext2D = js.native
   /**
     * Returns <canvas> element corresponding to this instance
     */
-  def getElement(): js.Object = js.native
+  def getElement(): org.scalajs.dom.raw.HTMLCanvasElement = js.native
   /**
     * Returns canvas height (in px)
     */
-  def getHeight(): js.Object = js.native
+  def getHeight(): Double = js.native
   /**
     * Returns an array of children objects of this instance Type parameter introduced in 1.3.10
     */
@@ -188,23 +188,23 @@ class StaticCanvas(el: String, options: js.Object = new js.Object()) extends js.
   /**
     * Returns canvas width (in px)
     */
-  def getWidth(): js.Object = js.native
+  def getWidth(): Double = js.native
   /**
     * Returns canvas zoom level
     */
-  def getZoom(): js.Object = js.native
+  def getZoom(): Double = js.native
   /**
     * Inserts an object into collection at specified index, then renders canvas (if `renderOnAddRemove` is not `false`) An object should be an instance of (or inherit from) fabric.Object
     */
-  def insertAt(`object`: js.Object, index: Double, nonSplicing: Boolean): js.Object = js.native
+  def insertAt(`object`: js.Object, index: Double, nonSplicing: Boolean): Unit = js.native
   /**
     * Returns true if collection contains no objects
     */
-  def isEmpty(): js.Object = js.native
+  def isEmpty(): Boolean = js.native
   /**
     * Returns object at specified index
     */
-  def item(index: Double): js.Object = js.native
+  def item(index: Double): Unit = js.native
   /**
     * Populates canvas with data from the specified dataless JSON. JSON format must conform to the one of fabric.Canvas#toDatalessJSON
     */
@@ -220,11 +220,11 @@ class StaticCanvas(el: String, options: js.Object = new js.Object()) extends js.
   /**
     * Stops event observing for a particular event handler. Calling this method without arguments removes all handlers for all events
     */
-  def off(eventName: String, handler: js.Function): js.Object = js.native
+  def off(eventName: String, handler: js.Function): Unit = js.native
   /**
     * Observes specified event
     */
-  def on(eventName: String, handler: js.Function): js.Object = js.native
+  def on(eventName: String, handler: js.Function): Unit = js.native
   /**
     * Callback; invoked right before object is about to be scaled/rotated
     */
@@ -236,7 +236,7 @@ class StaticCanvas(el: String, options: js.Object = new js.Object()) extends js.
   /**
     * Removes objects from a collection, then renders canvas (if `renderOnAddRemove` is not `false`)
     */
-  def remove(`object`: Object): js.Object = js.native
+  def remove(`object`: Object): Unit = js.native
   /**
     * Renders both the top canvas and the secondary container canvas.
     */
@@ -268,7 +268,7 @@ class StaticCanvas(el: String, options: js.Object = new js.Object()) extends js.
   /**
     * Sets height of this canvas instance
     */
-  def setHeight(value: String, options: js.Object = new js.Object()): Canvas = js.native
+  def setHeight(value: Double, options: js.Object = new js.Object()): Canvas = js.native
   /**
     * Sets background color for this canvas
     */
@@ -284,7 +284,7 @@ class StaticCanvas(el: String, options: js.Object = new js.Object()) extends js.
   /**
     * Sets width of this canvas instance
     */
-  def setWidth(value: String, options: js.Object = new js.Object()): Canvas = js.native
+  def setWidth(value: Double, options: js.Object = new js.Object()): Canvas = js.native
   /**
     * Sets zoom level of this canvas instance
     */
@@ -292,7 +292,7 @@ class StaticCanvas(el: String, options: js.Object = new js.Object()) extends js.
   /**
     * Returns a size of a collection (i.e: length of an array containing its objects)
     */
-  def size(): js.Object = js.native
+  def size(): Double = js.native
   /**
     * Straightens object, then rerenders canvas
     */
@@ -300,7 +300,7 @@ class StaticCanvas(el: String, options: js.Object = new js.Object()) extends js.
   /**
     * Returs dataless JSON representation of canvas
     */
-  def toDatalessJSON(propertiesToInclude: js.Array[String] = new js.Array[String]()): js.Object = js.native
+  def toDatalessJSON(propertiesToInclude: js.Array[String] = new js.Array[String]()): String = js.native
   /**
     * Returns dataless object representation of canvas
     */
@@ -308,15 +308,15 @@ class StaticCanvas(el: String, options: js.Object = new js.Object()) extends js.
   /**
     * Exports canvas element to a dataurl image. Note that when multiplier is used, cropping is scaled appropriately
     */
-  def toDataURL(options: js.Object = new js.Object()): js.Object = js.native
+  def toDataURL(options: js.Object = new js.Object()): String = js.native
   /**
     * Exports canvas element to a dataurl image (allowing to change image size via multiplier).
     */
-  def toDataURLWithMultiplier(format: String, multiplier: Double, quality: Double): js.Object = js.native
+  def toDataURLWithMultiplier(format: String, multiplier: Double, quality: Double): String = js.native
   /**
     * Returns JSON representation of canvas
     */
-  def toJSON(propertiesToInclude: js.Array[String] = new js.Array[String]()): js.Object = js.native
+  def toJSON(propertiesToInclude: js.Array[String] = new js.Array[String]()): String = js.native
   /**
     * Returns object representation of canvas
     */
@@ -324,11 +324,11 @@ class StaticCanvas(el: String, options: js.Object = new js.Object()) extends js.
   /**
     * Returns SVG representation of canvas
     */
-  def toSVG(options: js.Object = new js.Object(), reviver: js.Function = null): js.Object = js.native
+  def toSVG(options: js.Object = new js.Object(), reviver: js.Function = null): String = js.native
   /**
     * Fires event with an optional options object
     */
-  def trigger(eventName: String, options: js.Object = new js.Object()): js.Object = js.native
+  def trigger(eventName: String, options: js.Object = new js.Object()): Unit = js.native
   /**
     * Sets zoom level of this canvas instance, zoom centered around point
     */
@@ -348,5 +348,5 @@ object StaticCanvas extends js.Object {
   /**
     * Provides a way to check support of some of the canvas methods (either those of HTMLCanvasElement itself, or rendering context)
     */
-  def supports(methodName: String): js.Object = js.native
+  def supports(methodName: String): Boolean = js.native
 }

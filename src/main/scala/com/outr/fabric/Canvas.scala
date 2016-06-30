@@ -108,7 +108,7 @@ class Canvas(el: String, options: js.Object = new js.Object()) extends StaticCan
   /**
     * Checks if point is contained within an area of given object
     */
-  def containsPoint(e: org.scalajs.dom.Event, target: Object): js.Object = js.native
+  def containsPoint(e: org.scalajs.dom.Event, target: Object): Boolean = js.native
   /**
     * Deactivates all objects on canvas, removing any active group or object
     */
@@ -140,15 +140,15 @@ class Canvas(el: String, options: js.Object = new js.Object()) extends StaticCan
   /**
     * Returns context of canvas where object selection is drawn
     */
-  def getSelectionContext(): js.Object = js.native
+  def getSelectionContext(): org.scalajs.dom.CanvasRenderingContext2D = js.native
   /**
     * Returns <canvas> element on which object selection is drawn
     */
-  def getSelectionElement(): js.Object = js.native
+  def getSelectionElement(): org.scalajs.dom.raw.HTMLCanvasElement = js.native
   /**
     * Returns true if object is transparent at a certain location
     */
-  def isTargetTransparent(target: Object, x: Double, y: Double): js.Object = js.native
+  def isTargetTransparent(target: Object, x: Double, y: Double): Boolean = js.native
   /**
     * Removes all event listeners
     */

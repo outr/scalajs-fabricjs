@@ -16,7 +16,7 @@ class PathGroup(paths: js.Array[String], options: js.Object = new js.Object()) e
   /**
     * Returns true if all paths in this group are of same color
     */
-  def isSameColor(): js.Object = js.native
+  def isSameColor(): Boolean = js.native
   /**
     * Calculate width and height based on paths contained
     */

@@ -24,11 +24,11 @@ class Circle(options: js.Object = new js.Object()) extends Object(options) {
   /**
     * Returns horizontal radius of an object (according to how an object is scaled)
     */
-  def getRadiusX(): js.Object = js.native
+  def getRadiusX(): Double = js.native
   /**
     * Returns vertical radius of an object (according to how an object is scaled)
     */
-  def getRadiusY(): js.Object = js.native
+  def getRadiusY(): Double = js.native
   /**
     * Sets radius of an object (and updates width accordingly)
     */
@@ -36,7 +36,7 @@ class Circle(options: js.Object = new js.Object()) extends Object(options) {
   /**
     * Returns svg representation of an instance
     */
-  def toSVG(reviver: js.Function = null): js.Object = js.native
+  def toSVG(reviver: js.Function = null): String = js.native
 }
 
 /**

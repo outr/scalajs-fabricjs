@@ -20,7 +20,7 @@ class Point(x: Double, y: Double) extends js.Object {
   /**
     * Returns distance from this point and another one
     */
-  def distanceFrom(that: Point): js.Object = js.native
+  def distanceFrom(that: Point): Double = js.native
   /**
     * Divides this point by a value and returns a new one
     */
@@ -32,15 +32,15 @@ class Point(x: Double, y: Double) extends js.Object {
   /**
     * Returns true if this point is equal to another one
     */
-  def eq(that: Point): js.Object = js.native
+  def eq(that: Point): Boolean = js.native
   /**
     * Returns true if this point is greater another one
     */
-  def gt(that: Point): js.Object = js.native
+  def gt(that: Point): Boolean = js.native
   /**
     * Returns true if this point is greater than or equal to another one
     */
-  def gte(that: Point): js.Object = js.native
+  def gte(that: Point): Boolean = js.native
   /**
     * Returns new point which is the result of linear interpolation with this one and another one
     */
@@ -48,11 +48,11 @@ class Point(x: Double, y: Double) extends js.Object {
   /**
     * Returns true if this point is less than another one
     */
-  def lt(that: Point): js.Object = js.native
+  def lt(that: Point): Boolean = js.native
   /**
     * Returns true if this point is less than or equal to another one
     */
-  def lte(that: Point): js.Object = js.native
+  def lte(that: Point): Boolean = js.native
   /**
     * Returns a new point which is the max of this and another one
     */

@@ -316,11 +316,11 @@ class Object(options: js.Object = new js.Object()) extends js.Object {
   /**
     * Returns complexity of an instance
     */
-  def complexity(): js.Object = js.native
+  def complexity(): Double = js.native
   /**
     * Checks if point is inside the object
     */
-  def containsPoint(point: Point): js.Object = js.native
+  def containsPoint(point: Point): Boolean = js.native
   /**
     * Draws borders of an object's bounding box. Requires public properties: width, height Requires public options: padding, borderColor
     */
@@ -344,11 +344,11 @@ class Object(options: js.Object = new js.Object()) extends js.Object {
   /**
     * Basic getter
     */
-  def get(property: String): js.Object = js.native
+  def get(property: String): Any = js.native
   /**
     * Retrieves object's angle (in degrees)
     */
-  def getAngle(): js.Object = js.native
+  def getAngle(): Double = js.native
   /**
     * Returns coordinates of object's bounding rectangle (left, top, width, height)
     */
@@ -356,11 +356,11 @@ class Object(options: js.Object = new js.Object()) extends js.Object {
   /**
     * Returns height of an object's bounding rectangle
     */
-  def getBoundingRectHeight(): js.Object = js.native
+  def getBoundingRectHeight(): Double = js.native
   /**
     * Returns width of an object's bounding rectangle
     */
-  def getBoundingRectWidth(): js.Object = js.native
+  def getBoundingRectWidth(): Double = js.native
   /**
     * Returns the real center coordinates of the object
     */
@@ -368,27 +368,27 @@ class Object(options: js.Object = new js.Object()) extends js.Object {
   /**
     * Retrieves object's clipping function
     */
-  def getClipTo(): js.Object = js.native
+  def getClipTo(): js.Function = js.native
   /**
     * Retrieves object's fill
     */
-  def getFill(): js.Object = js.native
+  def getFill(): String = js.native
   /**
     * Retrieves object's flipX value
     */
-  def getFlipX(): js.Object = js.native
+  def getFlipX(): Boolean = js.native
   /**
     * Retrieves object's flipY value
     */
-  def getFlipY(): js.Object = js.native
+  def getFlipY(): Boolean = js.native
   /**
     * Returns height of an object
     */
-  def getHeight(): js.Object = js.native
+  def getHeight(): Double = js.native
   /**
     * Retrieves object's left position
     */
-  def getLeft(): js.Object = js.native
+  def getLeft(): Double = js.native
   /**
     * Returns coordinates of a pointer relative to an object
     */
@@ -396,15 +396,15 @@ class Object(options: js.Object = new js.Object()) extends js.Object {
   /**
     * Retrieves object's opacity
     */
-  def getOpacity(): js.Object = js.native
+  def getOpacity(): Double = js.native
   /**
     * Retrieves object's originX
     */
-  def getOriginX(): js.Object = js.native
+  def getOriginX(): String = js.native
   /**
     * Retrieves object's originY
     */
-  def getOriginY(): js.Object = js.native
+  def getOriginY(): String = js.native
   /**
     * Returns the coordinates of the object as if it has a different origin
     */
@@ -412,11 +412,11 @@ class Object(options: js.Object = new js.Object()) extends js.Object {
   /**
     * Retrieves object's scaleX value
     */
-  def getScaleX(): js.Object = js.native
+  def getScaleX(): Double = js.native
   /**
     * Retrieves object's scaleY value
     */
-  def getScaleY(): js.Object = js.native
+  def getScaleY(): Double = js.native
   /**
     * Retrieves object's shadow
     */
@@ -424,31 +424,31 @@ class Object(options: js.Object = new js.Object()) extends js.Object {
   /**
     * Retrieves object's stroke
     */
-  def getStroke(): js.Object = js.native
+  def getStroke(): String = js.native
   /**
     * Retrieves object's strokeWidth
     */
-  def getStrokeWidth(): js.Object = js.native
+  def getStrokeWidth(): Double = js.native
   /**
     * Returns filter for svg shadow
     */
-  def getSvgFilter(): js.Object = js.native
+  def getSvgFilter(): String = js.native
   /**
     * Returns styles-string for svg-export
     */
-  def getSvgStyles(skipShadow: Boolean): js.Object = js.native
+  def getSvgStyles(skipShadow: Boolean): String = js.native
   /**
     * Returns transform-string for svg-export
     */
-  def getSvgTransform(): js.Object = js.native
+  def getSvgTransform(): String = js.native
   /**
     * Returns transform-string for svg-export from the transform matrix of single elements
     */
-  def getSvgTransformMatrix(): js.Object = js.native
+  def getSvgTransformMatrix(): String = js.native
   /**
     * Retrieves object's top position
     */
-  def getTop(): js.Object = js.native
+  def getTop(): Double = js.native
   /**
     * Retrieves object's transformMatrix
     */
@@ -456,43 +456,43 @@ class Object(options: js.Object = new js.Object()) extends js.Object {
   /**
     * Retrieves viewportTransform from Object's canvas if possible
     */
-  def getViewportTransform(): js.Object = js.native
+  def getViewportTransform(): Boolean = js.native
   /**
     * Retrieves object's visible state
     */
-  def getVisible(): js.Object = js.native
+  def getVisible(): Boolean = js.native
   /**
     * Returns width of an object
     */
-  def getWidth(): js.Object = js.native
+  def getWidth(): Double = js.native
   /**
     * Returns true if object state (one of its state properties) was changed
     */
-  def hasStateChanged(): js.Object = js.native
+  def hasStateChanged(): Boolean = js.native
   /**
     * Checks if object intersects with another object
     */
-  def intersectsWithObject(other: js.Object): js.Object = js.native
+  def intersectsWithObject(other: js.Object): Boolean = js.native
   /**
     * Checks if object intersects with an area formed by 2 points
     */
-  def intersectsWithRect(pointTL: js.Object, pointBR: js.Object): js.Object = js.native
+  def intersectsWithRect(pointTL: js.Object, pointBR: js.Object): Boolean = js.native
   /**
     * Checks if object is fully contained within area of another object
     */
-  def isContainedWithinObject(other: js.Object): js.Object = js.native
+  def isContainedWithinObject(other: js.Object): Boolean = js.native
   /**
     * Checks if object is fully contained within area formed by 2 points
     */
-  def isContainedWithinRect(pointTL: js.Object, pointBR: js.Object): js.Object = js.native
+  def isContainedWithinRect(pointTL: js.Object, pointBR: js.Object): Boolean = js.native
   /**
     * Returns true if the specified control is visible, false otherwise.
     */
-  def isControlVisible(controlName: String): js.Object = js.native
+  def isControlVisible(controlName: String): Boolean = js.native
   /**
     * Returns true if specified type is identical to the type of an instance
     */
-  def isType(`type`: String): js.Object = js.native
+  def isType(`type`: String): Boolean = js.native
   /**
     * Moves an object to specified level in stack of drawn objects
     */
@@ -604,7 +604,7 @@ class Object(options: js.Object = new js.Object()) extends js.Object {
   /**
     * Sets the position of the object taking into consideration the object's origin
     */
-  def setPositionByOrigin(pos: Point, originX: String, originY: String): js.Object = js.native
+  def setPositionByOrigin(pos: Point, originX: String, originY: String): Unit = js.native
   /**
     * Sets object's scaleX value
     */
@@ -656,7 +656,7 @@ class Object(options: js.Object = new js.Object()) extends js.Object {
   /**
     * Converts an object into a data-url-like string
     */
-  def toDataURL(options: js.Object): js.Object = js.native
+  def toDataURL(options: js.Object): String = js.native
   /**
     * Toggles specified property from `true` to `false` or from `false` to `true`
     */

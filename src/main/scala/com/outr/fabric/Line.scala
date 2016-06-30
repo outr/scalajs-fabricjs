@@ -28,7 +28,7 @@ class Line(points: js.Array[String] = new js.Array[String](), options: js.Object
   /**
     * Returns SVG representation of an instance
     */
-  def toSVG(reviver: js.Function = null): js.Object = js.native
+  def toSVG(reviver: js.Function = null): String = js.native
 }
 
 /**

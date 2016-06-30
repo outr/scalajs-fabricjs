@@ -24,7 +24,7 @@ class Polyline(points: js.Array[String], options: js.Object = new js.Object(), s
   /**
     * Returns SVG representation of an instance
     */
-  def toSVG(reviver: js.Function = null): js.Object = js.native
+  def toSVG(reviver: js.Function = null): String = js.native
 }
 
 /**

@@ -28,7 +28,7 @@ class Text(text: String, options: js.Object = new js.Object()) extends Object(op
   /**
     * Font weight (e.g. bold, normal, 400, 600, 800)
     */
-  var fontWeight: String = js.native
+  var fontWeight: Double = js.native
   /**
     * Line height
     */
@@ -52,39 +52,39 @@ class Text(text: String, options: js.Object = new js.Object()) extends Object(op
   /**
     * Retrieves object's fontFamily
     */
-  def getFontFamily(): js.Object = js.native
+  def getFontFamily(): String = js.native
   /**
     * Retrieves object's fontSize
     */
-  def getFontSize(): js.Object = js.native
+  def getFontSize(): String = js.native
   /**
     * Retrieves object's fontStyle
     */
-  def getFontStyle(): js.Object = js.native
+  def getFontStyle(): String = js.native
   /**
     * Retrieves object's fontWeight
     */
-  def getFontWeight(): js.Object = js.native
+  def getFontWeight(): Double = js.native
   /**
     * Retrieves object's lineHeight
     */
-  def getLineHeight(): js.Object = js.native
+  def getLineHeight(): Double = js.native
   /**
     * Retrieves object's text
     */
-  def getText(): js.Object = js.native
+  def getText(): String = js.native
   /**
     * Retrieves object's textAlign
     */
-  def getTextAlign(): js.Object = js.native
+  def getTextAlign(): String = js.native
   /**
     * Retrieves object's textBackgroundColor
     */
-  def getTextBackgroundColor(): js.Object = js.native
+  def getTextBackgroundColor(): String = js.native
   /**
     * Retrieves object's textDecoration
     */
-  def getTextDecoration(): js.Object = js.native
+  def getTextDecoration(): String = js.native
   /**
     * Returns true because text has no style
     */
@@ -104,7 +104,7 @@ class Text(text: String, options: js.Object = new js.Object()) extends Object(op
   /**
     * Sets object's fontWeight Does not update the object .width and .height, call ._initDimensions() to update the values.
     */
-  def setFontWeight(fontWeight: String): Text = js.native
+  def setFontWeight(fontWeight: Double): Text = js.native
   /**
     * Sets object's lineHeight
     */
@@ -128,7 +128,7 @@ class Text(text: String, options: js.Object = new js.Object()) extends Object(op
   /**
     * Returns SVG representation of an instance
     */
-  def toSVG(reviver: js.Function = null): js.Object = js.native
+  def toSVG(reviver: js.Function = null): String = js.native
 }
 
 /**

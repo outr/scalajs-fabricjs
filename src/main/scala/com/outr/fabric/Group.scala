@@ -20,7 +20,7 @@ class Group(objects: js.Object, options: js.Object = new js.Object(), isAlreadyG
   /**
     * Adds objects to collection, then renders canvas (if `renderOnAddRemove` is not `false`) Objects should be instances of (or inherit from) fabric.Object
     */
-  def add(`object`: Object): js.Object = js.native
+  def add(`object`: Object): Unit = js.native
   /**
     * Adds an object to a group; Then recalculates group's dimension, position.
     */
@@ -28,7 +28,7 @@ class Group(objects: js.Object, options: js.Object = new js.Object(), isAlreadyG
   /**
     * Returns true if collection contains an object
     */
-  def contains(`object`: js.Object): js.Object = js.native
+  def contains(`object`: js.Object): Boolean = js.native
   /**
     * Destroys a group (restoring state of its objects)
     */
@@ -36,7 +36,7 @@ class Group(objects: js.Object, options: js.Object = new js.Object(), isAlreadyG
   /**
     * Executes given function for each object in this group
     */
-  def forEachObject(callback: js.Function, context: js.Object): js.Object = js.native
+  def forEachObject(callback: js.Function, context: js.Object): Unit = js.native
   /**
     * Returns an array of children objects of this instance Type parameter introduced in 1.3.10
     */
@@ -44,19 +44,19 @@ class Group(objects: js.Object, options: js.Object = new js.Object(), isAlreadyG
   /**
     * Checks whether this group was moved (since `saveCoords` was called last)
     */
-  def hasMoved(): js.Object = js.native
+  def hasMoved(): Boolean = js.native
   /**
     * Inserts an object into collection at specified index, then renders canvas (if `renderOnAddRemove` is not `false`) An object should be an instance of (or inherit from) fabric.Object
     */
-  def insertAt(`object`: js.Object, index: Double, nonSplicing: Boolean): js.Object = js.native
+  def insertAt(`object`: js.Object, index: Double, nonSplicing: Boolean): Unit = js.native
   /**
     * Returns true if collection contains no objects
     */
-  def isEmpty(): js.Object = js.native
+  def isEmpty(): Boolean = js.native
   /**
     * Returns object at specified index
     */
-  def item(index: Double): js.Object = js.native
+  def item(index: Double): Unit = js.native
   /**
     * Realises the transform from this group onto the supplied object i.e. it tells you what would happen if the supplied object was in the group, and then the group was destroyed. It mutates the supplied object.
     */
@@ -76,11 +76,11 @@ class Group(objects: js.Object, options: js.Object = new js.Object(), isAlreadyG
   /**
     * Returns a size of a collection (i.e: length of an array containing its objects)
     */
-  def size(): js.Object = js.native
+  def size(): Double = js.native
   /**
     * Returns svg representation of an instance
     */
-  def toSVG(reviver: js.Function = null): js.Object = js.native
+  def toSVG(reviver: js.Function = null): String = js.native
 }
 
 /**

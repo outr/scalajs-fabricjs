@@ -16,7 +16,7 @@ class PencilBrush(canvas: Canvas) extends BaseBrush {
   /**
     * Converts points to SVG path
     */
-  def convertPointsToSVGPath(points: js.Array[String], minX: Double, minY: Double): js.Object = js.native
+  def convertPointsToSVGPath(points: js.Array[String], minX: Double, minY: Double): String = js.native
   /**
     * Creates fabric.Path object to add on canvas
     */

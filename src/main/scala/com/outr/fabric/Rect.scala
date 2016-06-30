@@ -20,7 +20,7 @@ class Rect(options: js.Object = new js.Object()) extends Object(options) {
   /**
     * Returns svg representation of an instance
     */
-  def toSVG(reviver: js.Function = null): js.Object = js.native
+  def toSVG(reviver: js.Function = null): String = js.native
 }
 
 /**

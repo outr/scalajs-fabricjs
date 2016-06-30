@@ -24,7 +24,7 @@ class Pattern(options: js.Object = new js.Object()) extends js.Object {
   /**
     * Returns an instance of CanvasPattern
     */
-  def toLive(ctx: org.scalajs.dom.CanvasRenderingContext2D): js.Object = js.native
+  def toLive(ctx: org.scalajs.dom.CanvasRenderingContext2D): org.scalajs.dom.CanvasPattern = js.native
   /**
     * Returns object representation of a pattern
     */
@@ -32,5 +32,5 @@ class Pattern(options: js.Object = new js.Object()) extends js.Object {
   /**
     * Returns SVG representation of a pattern
     */
-  def toSVG(`object`: Object): js.Object = js.native
+  def toSVG(`object`: Object): String = js.native
 }

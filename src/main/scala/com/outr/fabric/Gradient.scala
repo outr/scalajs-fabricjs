@@ -24,7 +24,7 @@ class Gradient(options: js.Object = new js.Object()) extends js.Object {
   /**
     * Returns an instance of CanvasGradient
     */
-  def toLive(ctx: org.scalajs.dom.CanvasRenderingContext2D): js.Object = js.native
+  def toLive(ctx: org.scalajs.dom.CanvasRenderingContext2D): org.scalajs.dom.CanvasGradient = js.native
   /**
     * Returns object representation of a gradient
     */
@@ -32,7 +32,7 @@ class Gradient(options: js.Object = new js.Object()) extends js.Object {
   /**
     * Returns SVG representation of an gradient
     */
-  def toSVG(`object`: js.Object, normalize: Boolean): js.Object = js.native
+  def toSVG(`object`: js.Object, normalize: Boolean): String = js.native
 }
 
 /**

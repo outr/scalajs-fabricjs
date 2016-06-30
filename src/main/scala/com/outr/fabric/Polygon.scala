@@ -24,7 +24,7 @@ class Polygon(points: js.Array[String], options: js.Object = new js.Object()) ex
   /**
     * Returns svg representation of an instance
     */
-  def toSVG(reviver: js.Function = null): js.Object = js.native
+  def toSVG(reviver: js.Function = null): String = js.native
 }
 
 /**
