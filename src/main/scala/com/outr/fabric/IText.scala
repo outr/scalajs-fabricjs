@@ -258,14 +258,6 @@ class IText(text: String, options: js.Object = new js.Object()) extends Text(tex
     */
   def moveCursorUpWithShift(offset: Double): js.Object = js.native
   /**
-    * Stops event observing for a particular event handler. Calling this method without arguments removes all handlers for all events
-    */
-  def off(eventName: String, handler: js.Function): Unit = js.native
-  /**
-    * Observes specified event
-    */
-  def on(eventName: String, handler: js.Function): Unit = js.native
-  /**
     * Composition end
     */
   def onCompositionEnd(): js.Object = js.native

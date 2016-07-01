@@ -15,18 +15,19 @@ object Test extends JSApp {
     document.body.appendChild(element)
 //    element.width = window.innerWidth
 //    element.height = window.innerHeight
-    val canvas = new StaticCanvas("canvas")
+    val canvas = new Canvas("canvas")
     canvas.backgroundColor = "orange"
-    val rect = new Rect {
+    val rect = new Text("Hello World") {
       left = 100.0
       top = 100.0
       fill = "red"
-      width = 100
-      height = 100
+//      width = 100
+//      height = 100
+      on("selected", () => {
+        println("Selected!")
+      })
     }
-    val group = new Group(js.Array[Object]())
-    canvas.add(group)
-    group.addWithUpdate(rect)
+    canvas.add(rect)
     canvas.renderAll()
 
     window.addEventListener("resize", { (evt: Event) =>

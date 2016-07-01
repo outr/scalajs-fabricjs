@@ -689,6 +689,14 @@ class Object(options: js.Object = new js.Object()) extends js.Object {
     * Translates the coordinates from center to origin coordinates (based on the object's dimensions)
     */
   def translateToOriginPoint(center: Point, originX: String, originY: String): Point = js.native
+  /**
+    * Observes specified event
+    */
+  def on(eventName: String, handler: js.Function): Unit = js.native
+  /**
+    * Stops event observing for a particular event handler. Calling this method without arguments removes all handlers for all events
+    */
+  def off(eventName: String, handler: js.Function): Unit = js.native
 }
 
 /**
